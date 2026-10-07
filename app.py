@@ -15,8 +15,7 @@ tf_st.markdown("---")
 # 1. Establish project directory paths securely
 base_dir = os.path.dirname(os.path.abspath(__file__))
 # Reusing the underlying synthetic data matrix source path
-data_path = r"C:\Users\ACER\tinyml-iot-security\data\synthetic_L64.csv"
-
+data_path = os.path.join(base_dir, "data", "synthetic_L64.csv")
 # Load background dataset array vectors
 @tf_st.cache_data
 def load_federated_base_data():
